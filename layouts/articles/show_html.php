@@ -3,4 +3,4 @@
 <p><?= $article['content'] ?></p> <br>
 <em> poster le <?= $article['created_at'] ?></em> <br>
 
- <a href ="index.php">Retour</a>
+<a href="http://blog-2025-linux.test">Retour</a>
