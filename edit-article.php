@@ -14,7 +14,7 @@ echo $error;
 $error = '';
 
 
-// Récupération des informations d'un article à modifier
+// -Récupération des informations d'un article à modifier
 if (isset($_GET['id']) && filter_var($_GET['id'], FILTER_VALIDATE_INT)) {
 
   // Récupération des informations de l'article à éditer
