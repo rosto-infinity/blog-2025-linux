@@ -10,7 +10,7 @@ require_once 'database/database.php';
 // 1. Vérification de l'ID passé en GET
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 if ($id === false) {
-  // Utilisation de la fonction header pour rediriger avec un message d'erreur
+  //- Utilisation de la fonction header pour rediriger avec un message d'erreur
   header("Location: error.php?message=Id de l'article non valide.");
   exit();
 }
