@@ -9,7 +9,7 @@ $error = "";
 
 echo $error;
 /**
- * Éditer un article existant
+ * -Éditer un article existant
  */
 $error = '';
 
