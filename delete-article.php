@@ -28,6 +28,6 @@ if ($query->fetchColumn() == 0) {
 $query = $pdo->prepare('DELETE FROM articles WHERE id = :id');
 $query->execute(['id' => $id]);
 
-// 4. Redirection vers la page d'accueil
-header("Location: admin_dashboard.php");
+// 4.- Redirection vers la page d'accueil
+header("Location: admin.php");
 exit();
