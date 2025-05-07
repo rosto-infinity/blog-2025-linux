@@ -62,7 +62,7 @@ if (isset($_POST['update'])) {
     exit();
   }
 }
-// 3-Définit le titre de la page
+// 3-D-éfinit le titre de la page
 $pageTitle = "Éditer un article";
 
 // 4-Démarre la mise en tampon de sortie pour capturer le contenu HTML
