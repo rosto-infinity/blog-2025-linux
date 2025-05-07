@@ -15,7 +15,7 @@ if ($id === false) {
   exit();
 }
 
-// 2. Vérification que l'article existe
+// 2. -Vérification que l'article existe
 $query = $pdo->prepare('SELECT COUNT(*) FROM articles WHERE id = :id');
 $query->execute(['id' => $id]);
 
