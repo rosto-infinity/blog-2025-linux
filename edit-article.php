@@ -1,6 +1,6 @@
 <?php
 
-// 1-Démarre une nouvelle session ou reprend une session existante
+// 1--Démarre une nouvelle session ou reprend une session existante
 session_start();
 
 // 2Inclut le fichier de connexion à la base de données
