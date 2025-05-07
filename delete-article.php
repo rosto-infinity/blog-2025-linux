@@ -24,7 +24,7 @@ if ($query->fetchColumn() == 0) {
   exit();
 }
 
-// 3. Suppression de l'article
+// 3.- Suppression de l'article
 $query = $pdo->prepare('DELETE FROM articles WHERE id = :id');
 $query->execute(['id' => $id]);
 
