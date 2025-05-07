@@ -61,9 +61,9 @@
       <h2><?= $article['title'] ?></h2>
       <p><?= $article['introduction'] ?></p>
       <small> Ecrit le<?= $article['created_at'] ?> </small> <br />
-      <a href="article?id=<?= urlencode($article['id']); ?>">voir</a>
-      <a href="edit-article?id=<?= urlencode($article['id']); ?>">Éditer</a>
-      <a href="delete-article?id=<?= urlencode($article['id']); ?>"
+      <a href="article.php?id=<?= urlencode($article['id']); ?>">voir</a>
+      <a href="edit-article.php?id=<?= urlencode($article['id']); ?>">Éditer</a>
+      <a href="delete-article.php?id=<?= urlencode($article['id']); ?>"
         onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?!')">Supprimer</a>
     </div>
   <?php endforeach ?>

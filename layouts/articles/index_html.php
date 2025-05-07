@@ -9,6 +9,7 @@
       <article class="card2">
         <h2 class="card-title2"><?= htmlspecialchars($article['title']) ?></h2>
         <p class="card-intro2"><?= htmlspecialchars($article['introduction']) ?></p>
+        <small> Ecrit le <?= $article['created_at'] ?> </small> <br />
         <a href="article.php?id=<?= $article['id'] ?>" class="btn btn-primary">Voir plus</a>
       </article>
     <?php endforeach; ?>

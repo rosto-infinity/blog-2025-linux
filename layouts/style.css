@@ -302,7 +302,8 @@ a.passforget {
   display: inline-block;
   background-color: var(--color-first);
   color: var(--color-white);
-  padding: 10px 15px;
+  margin-top: 7px;
+  padding: 5px 15px;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
