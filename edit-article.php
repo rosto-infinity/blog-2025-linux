@@ -62,17 +62,10 @@ if (isset($_POST['update'])) {
     exit();
   }
 }
-// 3-D-éfinit le titre de la page
-$pageTitle = "Éditer un article";
-
-// 4-Démarre la mise en tampon de sortie pour capturer le contenu HTML
+$pageTitle = 'Éditer un article'; // Titre de la page pour le layout
 ob_start();
-
-// 5Inclut le fichier HTML pour éditer un article
-require 'layouts/articles/edit-article_html.php';
-
-// 6Récupère le contenu mis en tampon et le stocke dans la variable $pageContent
-$pageContent = ob_get_clean();
-
-// 7Inclut le modèle de mise en page HTML qui affichera le contenu de la page
-require 'layouts/layout_html.php';
+// Mise en tampon du HTML de la vue
+require __DIR__ . '/layouts/articles/edit-article_html.php';
+$pageContent = (string) ob_get_clean();
+// Inclusion du layout global
+require __DIR__ . '/layouts/layout_html.php';

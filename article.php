@@ -4,18 +4,38 @@ require_once 'database/database.php';
 
 $error = [];
 
-$articles_id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
-if ($articles_id === NULL || $articles_id === false) {
-    $error['articles_id'] = "Le parametre id  est invalide.";
+$article_id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+if ($article_id === NULL || $article_id === false) {
+    $error['article_id'] = "Le parametre id  est invalide.";
 }
-$sql = "SELECT * FROM articles WHERE id =:articles_id";
+$sql = "SELECT * FROM articles WHERE id =:article_id";
 $query = $pdo->prepare($sql);
-$query->execute(compact('articles_id'));
+$query->execute(compact('article_id'));
 $article = $query->fetch();
 
 //echo "<pre>";
 //var_dump($article);
 //echo "</pre>";
+
+
+/**
+ * 3. Récupération des commentaires de l'article en question et les users
+ * Pareil, toujours une requête préparée pour sécuriser la donnée filée par l'utilisateur (cet enfoiré en puissance !)
+ */
+
+$sql = "SELECT comments.*, users.username 
+ FROM comments
+ JOIN users ON comments.user_id = users.id 
+
+ WHERE article_id = :article_id";
+
+$query = $pdo->prepare($sql);
+
+// On exécute la requête en précisant le paramètre :article_id
+$query->execute(compact('article_id'));
+
+// On fouille le résultat pour en extraire les données réelles des commentaires
+$commentaires = $query->fetchAll();
 
 
 
